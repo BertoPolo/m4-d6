@@ -6,6 +6,7 @@ import SingleBook from "./components/SingleBook"
 import BookList from "./components/BookList"
 import fantasyBooks from "./fantasyBooks.json"
 import { Component } from "react"
+import { Col, Container, Row } from "react-bootstrap"
 
 class App extends Component {
   render() {

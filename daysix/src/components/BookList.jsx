@@ -1,8 +1,8 @@
-import React from "react"
+import { Component } from "react"
 import SingleBook from "./SingleBook"
 import { Col, Container, Form, Row } from "react-bootstrap"
 
-class BookList extends React.Component {
+class BookList extends Component {
   state = {
     searchQuery: "",
   }
@@ -27,9 +27,7 @@ class BookList extends React.Component {
           {this.props.books
             .filter((b) => b.title.toLowerCase().includes(this.state.searchQuery))
             .map((b) => (
-              <Col xs={3}>
-                <SingleBook key={b.asin} book={b} />
-              </Col>
+              <SingleBook key={b.asin} book={b} />
             ))}
         </Row>
       </Container>
